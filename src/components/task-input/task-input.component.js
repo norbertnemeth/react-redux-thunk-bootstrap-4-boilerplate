@@ -33,12 +33,14 @@ export default class TaskInput extends React.PureComponent {
             <Form.Control
               value={value}
               onChange={e => this.handleChange(e.target.value)}
+              placeholder="My new task"
+              required
             />
           </Col>
           <Col sm="2">
             <Button
               className="w-100"
-              variant="primary"
+              variant="outline-primary"
               type="submit"
               onClick={() => this.handleAdd()}
             >

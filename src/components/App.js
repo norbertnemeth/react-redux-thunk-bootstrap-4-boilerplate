@@ -6,9 +6,8 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 
 import TaskInput from './task-input/task-input.component';
 import Tasks from './tasks/tasks.component';
+import Footer from './footer/footer.component';
 import icons from '../side-effects/font-awesome';
-
-console.log(icons)
 
 library.add(...icons);
 
@@ -19,9 +18,14 @@ const App = () => (
         <TaskInput />
       </Col>
     </Row>
-    <Row className="mt-3 justify-content-center">
+    <Row className="justify-content-center">
       <Col sm="6">
         <Tasks />
+      </Col>
+    </Row>
+    <Row className="mt-2 justify-content-center">
+      <Col sm="6">
+        <Footer />
       </Col>
     </Row>
   </Container>
