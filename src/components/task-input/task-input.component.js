@@ -16,11 +16,13 @@ export default class TaskInput extends React.PureComponent {
 
   handleAdd = e => {
     const { value } = this.state;
+    const { addTask } = this.props;
     if (e) {
       e.preventDefault();
       e.stopPropagation();
     }
-    console.log(value);
+    addTask(value);
+    this.setState({ value: '' });
   }
 
   render() {
@@ -42,7 +44,6 @@ export default class TaskInput extends React.PureComponent {
               className="w-100"
               variant="outline-primary"
               type="submit"
-              onClick={() => this.handleAdd()}
             >
               Add
             </Button>

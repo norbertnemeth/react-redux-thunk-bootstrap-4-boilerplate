@@ -2,18 +2,14 @@ import React from 'react';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const tasks = [
-  { label: 'Bread1', isDone: true },
-  { label: 'Bread2', isDone: false },
-  { label: 'Bread3', isDone: true }
-];
-
 export default class Tasks extends React.PureComponent {
   handleClick = () => {
 
   };
 
   render() {
+    const { tasks } = this.props;
+    console.log('tasks', tasks)
     return (
       <ListGroup>
         {

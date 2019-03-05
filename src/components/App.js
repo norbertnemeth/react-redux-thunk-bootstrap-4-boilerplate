@@ -4,8 +4,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { library } from '@fortawesome/fontawesome-svg-core';
 
-import TaskInput from './task-input/task-input.component';
-import Tasks from './tasks/tasks.component';
+import TaskInput from './task-input/task-input.container';
+import Tasks from './tasks/tasks.container';
 import Footer from './footer/footer.component';
 import icons from '../side-effects/font-awesome';
 
