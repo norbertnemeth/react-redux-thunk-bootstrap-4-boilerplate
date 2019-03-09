@@ -4,13 +4,33 @@ import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-export default ({ clearTasks }) => (
+import filterTypes from '../../constants/filterTypes';
+
+export default ({ clearTasks, changeFilter, activeFilter }) => (
   <Row>
     <Col sm={6}>
       <ButtonToolbar>
-        <Button variant="link">All</Button>
-        <Button variant="link">Closed</Button>
-        <Button variant="link">Opened</Button>
+        <Button
+          variant="link"
+          className={activeFilter === filterTypes.ALL ? 'font-weight-bold' : ''}
+          onClick={() => changeFilter(filterTypes.ALL)}
+        >
+          All
+        </Button>
+        <Button
+          variant="link"
+          className={activeFilter === filterTypes.CLOSED ? 'font-weight-bold' : ''}
+          onClick={() => changeFilter(filterTypes.CLOSED)}
+        >
+          Closed
+        </Button>
+        <Button
+          variant="link"
+          className={activeFilter === filterTypes.OPENED ? 'font-weight-bold' : ''}
+          onClick={() => changeFilter(filterTypes.OPENED)}
+        >
+          Opened
+        </Button>
       </ButtonToolbar>
     </Col>
     <Col className="d-flex" sm={6}>

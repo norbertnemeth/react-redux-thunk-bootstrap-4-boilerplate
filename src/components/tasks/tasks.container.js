@@ -5,9 +5,13 @@ import {
   getTasks,
   toggleTask
 } from '../../store/tasks';
+import {
+  getActiveFilter
+} from '../../store/filter';
 
 const mapStateToProps = state => ({
-  tasks: getTasks(state)
+  tasks: getTasks(state),
+  activeFilter: getActiveFilter(state)
 });
 
 const mapDispatchToProps = {
