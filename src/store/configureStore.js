@@ -6,7 +6,6 @@ import rootReducer from './reducers';
 
 const isDevelopment = process.env.NODE_ENV === 'development';
 
-
 const middlewares = applyMiddleware(
   thunk.withExtraArgument({})
 );

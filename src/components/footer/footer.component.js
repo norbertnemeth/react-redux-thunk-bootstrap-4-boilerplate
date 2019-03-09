@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-export default () => (
+export default ({ clearTasks }) => (
   <Row>
     <Col sm={6}>
       <ButtonToolbar>
@@ -15,7 +15,12 @@ export default () => (
     </Col>
     <Col className="d-flex" sm={6}>
       <ButtonToolbar className="ml-auto">
-        <Button variant="outline-secondary">Clear</Button>
+        <Button
+          variant="outline-secondary"
+          onClick={() => clearTasks()}
+        >
+          Clear
+        </Button>
       </ButtonToolbar>
     </Col>
   </Row>

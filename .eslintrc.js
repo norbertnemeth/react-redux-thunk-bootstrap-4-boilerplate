@@ -31,6 +31,6 @@ module.exports = {
     'max-len': ["error", { "code": 175 }],
     'no-console': ["warn"],
     'react/no-array-index-key': 0,
-    'react/prop-types': 1
+    'react/prop-types': 0
   },
 };

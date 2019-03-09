@@ -37,11 +37,13 @@ export const getTasks = state => state.tasks;
  */
 export const reducer = handleActions(
   {
-    [addTask]: (state, { payload: label }) => ([...state, { id: Date.now(), label, isDone: false }])
+    [addTask]: (state, { payload: label }) => ([...state, { id: Date.now(), label, isDone: false }]),
+    [toggleTask]: (state, { payload: id }) => state.map(task => (task.id === id ? ({ ...task, isDone: !task.isDone }) : task)),
+    [clearTasks]: () => initialState
   },
   initialState
 );
 
 /**
- * ASYNC ACTIONS
+ * THUNK AND ASYNC ACTIONS
  */

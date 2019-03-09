@@ -6,7 +6,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 
 import TaskInput from './task-input/task-input.container';
 import Tasks from './tasks/tasks.container';
-import Footer from './footer/footer.component';
+import Footer from './footer/footer.container';
 import icons from '../side-effects/font-awesome';
 
 library.add(...icons);
